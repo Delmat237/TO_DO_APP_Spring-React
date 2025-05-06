@@ -1,0 +1,75 @@
+/* Variables de couleur */
+:root {
+  --primary-color: #007BFF; /* Bleu Shazam */
+  --background-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --button-bg: #1a1a1a;
+  --button-border-hover: #646cff;
+}
+
+/* Thème Orange Shazam */
+.theme-orange {
+  --primary-color: #FF8500;
+  --button-border-hover: #cc6900;
+}
+
+/* Styles globaux */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  flex-direction: column; /* Responsive */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Bouton de soumission */
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--button-border-hover);
+}
+
+/* Bouton de bascule de thème */
+.theme-toggle {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--button-border-hover);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  button {
+    width: 80%;
+  }
+}

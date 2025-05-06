@@ -1,0 +1,47 @@
+#version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: azaleodel
+      MYSQL_DATABASE: todo # Nom de la base en minuscules pour éviter tout problème de casse
+      MYSQL_USER: springuser
+      MYSQL_PASSWORD: AzaLeoDel123!
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./API_TO_DO_APP
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/todo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: springuser
+      SPRING_DATASOURCE_PASSWORD: AzaLeoDel123!
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SERVER_PORT: 9000 # Port Spring Boot
+    ports:
+      - "9000:9000"
+
+  frontend:
+    build:
+      context: ./to_do_app_frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./to_do_app_frontend:/app
+      - /app/node_modules
+
+volumes:
+  db-data:

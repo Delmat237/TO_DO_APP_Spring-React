@@ -1,0 +1,11 @@
+target/
+# Ignorer les fichiers tar (images Docker exportées)
+*.tar
+
+# Ignorer les dossiers node_modules (exemple pour frontend)
+node_modules/
+
+# Ignorer les fichiers temporaires, logs, etc.
+*.log
+.DS_Store
+

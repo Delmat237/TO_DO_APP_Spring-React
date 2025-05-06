@@ -1,0 +1,156 @@
+/* Styles globaux */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Conteneur principal centré verticalement et horizontalement */
+.app-container {
+  height: 100vh; /* hauteur totale de la fenêtre */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+/* Conteneur formulaire connexion */
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Formulaire */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007BFF;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  margin-top: 16px;
+  color: red;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Conteneur générique */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* Titres */
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* Liste des tâches */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list li:hover {
+  background-color: #f0f4ff;
+}
+
+/* Boutons dans la liste */
+.task-list li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.task-list li button:hover {
+  background-color: #b02a37;
+}
+
+/* Messages */
+.message, .success-message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.message {
+  color: #666;
+}
+
+.success-message {
+  color: green;
+  font-weight: 600;
+}
