@@ -1,3 +1,66 @@
+text
+# Frontend TO_DO_APP - React + Vite
+
+## Description
+
+Interface utilisateur développée avec React et Vite.
+
+---
+
+## Prérequis
+
+- Node.js 18+
+- npm ou yarn
+
+---
+
+## Lancement local
+
+Installer les dépendances :
+
+npm install
+
+text
+
+Lancer le serveur de développement :
+
+npm run dev
+
+text
+
+L’application sera accessible sur :  
+`http://localhost:5173`
+
+---
+
+## Build production
+
+Pour générer une version optimisée :
+
+npm run build
+
+text
+
+---
+
+## Configuration Docker
+
+Le Dockerfile dans ce dossier construit l’image frontend.  
+Le port 5173 est exposé.
+
+---
+
+## Proxy API
+
+Le frontend est configuré pour proxyfier les requêtes API vers le backend sur `http://localhost:9000`.
+
+---
+
+## Contribution
+
+Merci de suivre les conventions React et d’utiliser ESLint.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
